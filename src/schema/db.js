@@ -6,10 +6,7 @@ const ip = mongoCred.creds.host;
 const username = mongoCred.creds.username;
 const password = mongoCred.creds.password;
 
-mongoose.connect(`mongodb://${username}:${password}@${ip}/${database}`, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(`mongodb://${username}:${password}@${ip}/${database}`);
 
 const db = mongoose.connection;
 
